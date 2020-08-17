@@ -1,0 +1,14 @@
+{
+  "name": "marusia-skill-echo-python",
+  "version": "1.0.0",
+  "description": "Example Marusia Skill",
+  "main": "index.js",
+  "scripts": {
+    "start": "sls offline --httpPort=3333",
+    "deploy": "sls deploy --stage=production"
+  },
+  "devDependencies": {
+    "serverless": "^1.78.1",
+    "serverless-offline": "^6.5.0"
+  }
+}

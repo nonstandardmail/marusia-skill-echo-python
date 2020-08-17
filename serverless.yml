@@ -1,0 +1,20 @@
+service: marusia-skill-echo-python
+
+plugins:
+  - serverless-offline
+
+custom:
+  stage: ${opt:stage, self:provider.defaultStage}
+
+provider:
+  name: aws
+  runtime: python3.8
+  defaultStage: production
+
+functions:
+  webhook:
+    handler: handler.webhook
+    events:
+      - http:
+          path: webhook
+          method: post
